@@ -1,0 +1,37 @@
+.tb{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+.trhead{
+    background-color: rgb(73, 176, 207);
+    font-size: 16px;
+    height: 80px;
+}
+.no{
+    width: 50px;
+    border: 1px solid black;
+}
+.msv{
+    width: 200px;
+    border: 1px solid black;
+}
+.name{
+    width: 200px;
+    border: 1px solid black;
+}
+.birthday{
+    width: 50px;
+    border: 1px solid black;
+}
+.sex{
+    width: 50px;
+    border: 1px solid black;
+}
+.class{
+    width: 50px;
+    border: 1px solid black;
+}
+.td{
+    border: 1px solid black;
+}
