@@ -1,0 +1,8 @@
+div {
+    background-color: blue;
+    box-shadow:-5px -5px 5px green, 5px 5px 5px orange;
+    margin-bottom: 30px;
+    height: 100px;
+    width: 500px;
+    
+}
