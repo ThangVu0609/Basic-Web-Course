@@ -1,8 +1,26 @@
-div {
+block{
+    display: block;
+}
+block > div {
     background-color: blue;
     box-shadow:-5px -5px 5px green, 5px 5px 5px orange;
     margin-bottom: 30px;
-    height: 100px;
-    width: 500px;
-    
+    /* height: 100px;
+    width: 500px; */
+    padding: 30px;
+}
+block > div:nth-child(odd) div{
+    border: 20px solid;
+    border-image-source: url(https://webcoban.vn/image/matrix.png);
+    border-image-slice:50 50 50 50;
+    border-image-width: repeat;
+    background-color: white;
+    padding: 50px;
+}
+block > div:nth-child(even) div{
+    border-width: 0px;
+    border-top-width: 20px;
+    border-color: red;
+    border-style: dotted;
+
 }
