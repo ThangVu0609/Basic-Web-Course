@@ -1,0 +1,44 @@
+body>ul{
+    font-size: 16pt;
+    font-weight: bold;
+    list-style-type: decimal-leading-zero;
+}
+body>ul>li>ul{
+    list-style-image: url(https://webcoban.vn/image/check.jpg);
+}
+table,td {
+    border: 1px solid black;
+    text-align: center;
+}
+td {
+    width: 250px;
+    height: 300px;
+}
+.td-HTML {
+    vertical-align: bottom;
+    writing-mode: vertical-rl;
+    word-break: word;
+}
+.td-CSS {
+    text-decoration: red wavy overline;
+    word-break: word;
+}
+.td-JavaScrift {
+    vertical-align: bottom;
+    word-break: word;
+}
+h1.html+p {
+	color: red;
+}
+h1.css~p {
+	color: red;
+}
+body > p{
+    border:1px solid black;
+    width: 500px;
+}
+body > p::before{
+    content:"Hello - ";
+    color:red;
+    background-color:yellow;
+}
