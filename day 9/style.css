@@ -1,0 +1,94 @@
+table,th,td {
+    border:1px solid #acabab;
+}
+table {
+    border-collapse: collapse;
+    width: 1800px;
+}
+tr {
+    height: 50px;
+    text-align: center;
+}
+table>thead>tr {
+    background-color: rgb(18, 138, 236) !important;
+}
+table tr:nth-child(odd) {
+    background-color: rgb(170, 167, 167);
+}
+table tr:nth-child(even) {
+    background-color: rgb(214, 211, 211);
+}
+#table-container {
+    border: red 3px solid;
+    width: 100%;
+    overflow: auto;
+}
+table tr:hover{
+    background-color:white;
+    cursor:pointer;
+}
+.box-container {
+    padding:50px;
+    border:30px dotted crimson;
+}
+.border-box{
+    width: 500px;
+    box-sizing: border-box;
+}
+.content-box{
+    width: 340px;
+    box-sizing: content-box;
+}
+.quote {
+    quotes: '\201C' '\201E';
+    font-size: 60px;
+    font-weight: bold;
+    /* text-align: center; */
+}
+.text {
+    height: 200px;
+    text-align:justify;
+    column-count:3;
+    column-gap:50px;
+    column-rule-style:double;
+    column-rule-width:10px;
+    column-rule-color:red;
+ }
+ .column-fill-auto {
+        column-fill: auto;
+ } 
+ .column-fill-balance {
+        column-fill: balance;
+ }
+ .blur {
+     filter: blur(7px);
+ }
+ .red {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+ }
+ .opacity-100{
+    opacity: 1;
+ }
+ .opacity-50{
+    opacity: 0.5;
+ }
+ .opacity-30{
+    opacity: 0.3;
+ }
+ .blue {
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+ }
+ .opacity-100{
+    opacity: 1;
+ }
+ .opacity-50{
+    opacity: 0.5;
+ }
+ .opacity-30{
+    opacity: 0.3;
+ }
+ 
