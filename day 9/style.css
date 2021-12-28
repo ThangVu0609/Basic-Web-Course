@@ -3,7 +3,8 @@ table,th,td {
 }
 table {
     border-collapse: collapse;
-    width: 1800px;
+    width: 100%;
+    min-width: 1000px;
 }
 tr {
     height: 50px;
@@ -81,14 +82,5 @@ table tr:hover{
     background-color: blue;
     color: white;
     font-size: 20px;
- }
- .opacity-100{
-    opacity: 1;
- }
- .opacity-50{
-    opacity: 0.5;
- }
- .opacity-30{
-    opacity: 0.3;
  }
  

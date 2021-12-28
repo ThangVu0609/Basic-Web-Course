@@ -1,0 +1,40 @@
+.head {
+    padding: 30px;
+    background-color: turquoise;
+    text-align: center;
+    font-weight: bold;
+}
+.head :nth-child(1) {
+    font-size: 25px;
+    vertical-align: middle;
+}
+.link {
+    background-color: black;
+    color: white;
+}
+.link * {
+    padding: 15px;
+}
+.container {
+    width: 100%;
+    overflow: auto;
+}
+.left {
+    /* display: flex; */
+    float:left;
+    background-color: gray;
+    width: 30%;
+    height: 600px;
+    box-sizing: border-box;
+}
+.left * {
+    display: block;
+}
+.right {
+    /* display: flex; */
+    background-color: wheat;
+    box-sizing: border-box;
+    float: right;
+    width: 70%;
+    height: 600px;
+}
