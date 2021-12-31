@@ -132,4 +132,10 @@
             .menu {
                 flex-direction: column;
             }
+            .footer {
+                background-color: rgb(12, 12, 12);
+                padding: 15px;
+                text-align: center;
+                color: white;
+            }
         }
