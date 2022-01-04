@@ -67,6 +67,7 @@ body {
     text-align: center;
     border-bottom: 3px solid gray;
 }
+
 /* .main div:nth-child(1) {
     text-align: center;
 } */
@@ -76,28 +77,36 @@ table {
     border: 2px solid grey;
     border-collapse: collapse;
 }
+
 table td {
     border: 2px solid grey;
     color: black;
 }
+
 ul {
     list-style-image: url(https://webcoban.vn/image/check.jpg);
 }
+
 table li {
     text-align: start;
 }
+
 table tbody tr {
     background-color: grey;
 }
+
 table tbody tr:nth-child(odd) {
     background-color: rgba(131, 137, 135, 0.5);
 }
+
 table tbody tr:nth-child(even) {
     background-color: rgba(131, 137, 135, 0.2);
 }
+
 table tbody tr:hover {
     background-color: white;
 }
+
 .sothich p {
     font-weight: bold;
     font-size: 19px;
@@ -105,14 +114,16 @@ table tbody tr:hover {
     text-align: center;
     border-bottom: 2px solid gray;
 }
+
 .so-thich-container {
     display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
+
 .so-thich-item {
     display: block;
     width: 150px;
@@ -123,6 +134,7 @@ table tbody tr:hover {
     transition-property: width;
     transition-duration: 2s;
 }
+
 .so-thich-item a {
     text-decoration: none;
     color: black;
@@ -131,13 +143,16 @@ table tbody tr:hover {
     transition-property: font-size, font-weight;
     transition-duration: 2s;
 }
+
 .so-thich-item:hover {
     width: 300px;
 }
+
 .so-thich-item:hover a {
     font-size: 32px;
     font-weight: 700;
 }
+
 /* .body .main .sothich div a:hover {
     font-size: 200%;
 } */
@@ -158,6 +173,7 @@ table tbody tr:hover {
     .menu {
         flex-direction: column;
     }
+
     .footer {
         background-color: rgb(12, 12, 12);
         padding: 15px;

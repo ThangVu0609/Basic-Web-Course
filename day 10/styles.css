@@ -9,6 +9,10 @@
     top: 0px;
     left: 0px;
     position: relative;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    z-index: 10;
 
     /* Chỉ cho phép scroll theo chiều ngang */
     /*         
@@ -41,6 +45,42 @@
         left: 0px;
         border: 10px solid blue;
     }
+    10% {
+        top: 0px;
+        left: 40%;
+        border: 10px solid red;
+    }
+    20% {
+        top: 0px;
+        left: 70%;
+        border: 10px solid blue;
+    }
+    30% {
+        top: 0px;
+        left: 80%;
+        border: 10px solid blue;
+    }
+    40% {
+        top: 0px;
+        left: 87%;
+        border: 10px solid blue;
+    }
+    50% {
+        top: 50%;
+        left: 87%;
+        border: 10px solid blue;
+    }
+    70% {
+        top: 80%;
+        left: 50%;
+        border: 10px solid blue;
+    }
+    80% {
+        top: 50%;
+        left: 0px;
+        border: 10px solid blue;
+    }
+
 }
 
 /*-----------*/
@@ -51,6 +91,8 @@
         để element #box hiện ở vị trí như trong video mô tả
     */
     text-align: center;
+    position: relative;
+    top: -200px;
 }
 
 /* 
@@ -73,6 +115,10 @@
     background: white;
     border: 8px solid black;
     padding: 10px;
+    position: absolute;
+    bottom:0px;
+    left:0px;
+    z-index: 5;
 
     /* 
         Sử dụng position:absolute và bổ sung các thuộc tính CSS phù hợp 
@@ -93,6 +139,8 @@
 .relative {
     border: 1px solid black;
     background-color: pink;
+    position: relative;
+    top: -35px;
 
     /* 
         Sử dụng position:relative và bổ sung các thuộc tính CSS phù hợp 
