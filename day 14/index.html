@@ -1,0 +1,30 @@
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="text/javascript" src="./javascript.js"></script>
+</head>
+<body>
+    <html>
+<body>
+    <div class="khung">
+        <div align="right">
+            <span>Dãy số cần tính: </span>
+            <input type="text" id="string" value="">
+        </div>
+        <div align="right">
+            <span>Số dòng tối đa cần hiển thị: </span>
+            <input id="row" type="text" value="">
+        </div>
+        <input type="submit" onclick="myFunction()" style="position: absolute; right: 600px;"/>
+        <br>
+    </div>
+    <script>
+        function myFunction(){
+            var a = document.getElementById("string").value;
+            var getNumber = a.split(",");
+            var row= document.getElementById("row").value;
+            document.write(getNumber);
+        }
+    </script>
+</body>
+</html>
+</body>
