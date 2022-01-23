@@ -6,3 +6,38 @@
     margin-left: auto;
     margin-right: auto;
 }
+.abc {
+    align-content: right;
+    margin-bottom: 100px;
+}
+.container {
+    margin-top: 50px;
+}
+.square{
+    height: 70px;
+    width: 70px;
+    border: black 1px solid;
+    float: left;
+    line-height: 65.5px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+.positive{
+    background-color: green;
+}
+.negative{
+    background-color: red;
+}
+.odd{
+    background-color: rgba(0,0,0,0.3);
+}
+.even{
+    background-color: rgba(0,0,0,1);
+}
+.text{
+    color: white;
+}
+.zero{
+
+}
