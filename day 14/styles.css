@@ -30,14 +30,11 @@
     background-color: red;
 }
 .odd{
-    background-color: rgba(0,0,0,0.3);
+    opacity: 0,3;
 }
 .even{
-    background-color: rgba(0,0,0,1);
+    opacity: 1;
 }
 .text{
     color: white;
-}
-.zero{
-
 }

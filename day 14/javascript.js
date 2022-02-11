@@ -1,7 +1,7 @@
 function myFunction(){
     var chuoiso = document.getElementById("string").value;
     var getNumber = chuoiso.split(",");
-    getNumber.sort(function (a,b){return a-b});
+    getNumber.sort(function(a,b){return a-b});
     document.getElementById("abc").innerHTML = "Số lượng các chữ số: " + getNumber.length;
     var row= document.getElementById("row").value;
     //var numberOfRow = math.ceil(getNumber.length/row);
