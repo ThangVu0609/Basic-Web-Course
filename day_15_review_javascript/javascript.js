@@ -5,7 +5,9 @@ var address = "...";
 
 // thay thế HTML chứa các đoạn mã input nhập thông tin
 function replaceHTML(id, value) {
-    document.getElementById(id).innerHTML = value;
+    // document.getElementById(id).innerHTML = value; -> Javascript
+
+    $('#' + id).html(value); // -> jQuery
 }
 // Tạo các mã HTML chứa thẻ input
 function makeTagInput(id, value, type) {
@@ -25,7 +27,8 @@ function profileOnEdit() {
     var updateLink = makeActionLink("profileOnUpdate", "Cập nhật");
 
     // thay thế HTML chứa đoạn mã các link Huỷ và Cập nhật
-    document.getElementById("profileActionButtons").innerHTML = cancelLink + " " + updateLink;
+    // document.getElementById("profileActionButtons").innerHTML = cancelLink + " " + updateLink; -> Javascript
+    $("#profileActionButtons").html(cancelLink + " " + updateLink); // -> jQuery
 
     // thay thế HTML chứa các đoạn mã input nhập thông tin
     // replaceHTML("name", `<input id="nameInput" type="text" value="${name}">`); // ES6 Literal Template String
@@ -37,10 +40,17 @@ function profileOnEdit() {
 
 function profileOnUpdate() {
     // lấy giá trị đã nhập và cập nhật vào các biến toàn cục
-    name = document.getElementById("nameInput").value;
-    birthday = document.getElementById("birthdayInput").value;
-    sex = document.getElementById("sexInput").value;
-    address = document.getElementById("addressInput").value;
+    // -> Javascript
+    // name = document.getElementById("nameInput").value;
+    // birthday = document.getElementById("birthdayInput").value;
+    // sex = document.getElementById("sexInput").value;
+    // address = document.getElementById("addressInput").value;
+
+    // -> jQuery
+    name = $("#nameInput").val();
+    birthday = $("#birthdayInput").val();
+    sex = $("#sexInput").val();
+    address = $("#addressInput").val();
 
     // thay thế giá trị đã nhập để hiển thị ra HTML
     replaceHTML("name", name);
@@ -50,7 +60,8 @@ function profileOnUpdate() {
 
     // hiển thị link Sửa
     var editLink = makeActionLink("profileOnEdit", "Sửa");
-    document.getElementById("profileActionButtons").innerHTML = editLink;
+    // document.getElementById("profileActionButtons").innerHTML = editLink; -> Javascript
+    $("#profileActionButtons").html(editLink) // -> jQuery
 }
 
 function profileOnCancel() {
@@ -62,7 +73,8 @@ function profileOnCancel() {
 
     // hiển thị link Sửa
     var editLink = makeActionLink("profileOnEdit", "Sửa");
-    document.getElementById("profileActionButtons").innerHTML = editLink;
+    // document.getElementById("profileActionButtons").innerHTML = editLink; -> Javascript
+    $("#profileActionButtons").html(editLink); // -> jQuery
 }
 
 // Object to store a list of workingExperience
@@ -117,10 +129,16 @@ function makeTableBodyOfWorkingExp() {
 
 makeTableBodyOfWorkingExp();
 
+// Biến lưu số dòng đang được chỉnh sửa
+var numOfRowsInEditing = 0;
+
 function workingExpOnEdit(index) {
+    numOfRowsInEditing++;
+
     var updateLink = makeActionLinkForEachRowOfWorkingExp("workingExpOnUpdate", "Cập nhật", index);
     var cancelLink = makeActionLinkForEachRowOfWorkingExp("workingExpOnCancel", "Hủy", index);
     replaceHTML("expActions_" + index,updateLink + '<br/>' + cancelLink)
+
     replaceHTML(
         "expTime_" + index, 
         makeTagInput("expTimeInput_" + index, workingExperience[index].time, "text")
@@ -151,6 +169,7 @@ function workingExpOnDelete(index) {
     }
 }
 
+
 // In gia tri cua mot Item trong Object ra dong HTML tuong ung
 function printItemValue(index) {
     var editLink = makeActionLinkForEachRowOfWorkingExp("workingExpOnEdit", "Sửa", index);
@@ -172,13 +191,52 @@ function printItemValue(index) {
     
 }
 function workingExpOnUpdate(index) {
-    workingExperience[index].time = document.getElementById("expTimeInput_" + index).value;
-    workingExperience[index].companyName = document.getElementById("expCompanyNameInput_" + index).value;
-    workingExperience[index].position = document.getElementById("expPositionInput_" + index).value;
-    workingExperience[index].job = document.getElementById("expJobTextarea_" + index).value;
+    numOfRowsInEditing--;
+
+    // -> Javascript
+    // workingExperience[index].time = document.getElementById("expTimeInput_" + index).value;
+    // workingExperience[index].companyName = document.getElementById("expCompanyNameInput_" + index).value;
+    // workingExperience[index].position = document.getElementById("expPositionInput_" + index).value;
+    // workingExperience[index].job = document.getElementById("expJobTextarea_" + index).value;
+
+    // -> jQuery
+    workingExperience[index].time = $("#expTimeInput_" + index).val();
+    workingExperience[index].companyName = $("#expCompanyNameInput_" + index).val();
+    workingExperience[index].position = $("#expPositionInput_" + index).val();
+    workingExperience[index].job = $("#expJobTextarea_" + index).val();
+
     printItemValue(index);
 }
 
 function workingExpOnCancel(index) {
+    numOfRowsInEditing--;
+
     printItemValue(index);
 }
+
+function workingExpOnCreate() {
+    if (numOfRowsInEditing > 0) {
+        alert("Bạn vui lòng hoàn tất cập nhật các dòng đang được chỉnh sửa trước khi thêm mới.");
+        return;
+    }
+
+    workingExperience.push({
+        "time": "",
+        "companyName": "",
+        "position": "",
+        "job": ""
+    });
+    makeTableBodyOfWorkingExp();
+    workingExpOnEdit(workingExperience.length - 1);
+    //
+}
+/*$(document).ready(function(){
+    $("#loginButton").click(function(){
+      $(".main").load("login-form.html", function(login-form.html, statusTxt, xhr){
+        if(statusTxt == "success")
+          alert("External content loaded successfully!");
+        if(statusTxt == "error")
+          alert("Error: " + xhr.status + ": " + xhr.statusText);
+      });
+    });
+  });*/

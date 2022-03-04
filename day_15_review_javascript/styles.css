@@ -135,14 +135,21 @@ table td, table th {
 ul.list-with-image {
     list-style-image: url(https://webcoban.vn/image/check.jpg);
 }
-#addRow {
-    position: absolute;
-    right: 30px;
-}
 @media screen and (max-width: 500px) {
 
     .body,
     .menu {
         flex-direction: column;
     }
+}
+
+/* Ngăn co giãn textarea không kiểm soát */
+[id^="expJob"] textarea {
+    max-width: 250px;
+    min-width: 100px;
+}
+
+.btn-create-container {
+    text-align: right;
+    margin-right: 10px;
 }
