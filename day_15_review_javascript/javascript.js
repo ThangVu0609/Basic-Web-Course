@@ -230,13 +230,6 @@ function workingExpOnCreate() {
     workingExpOnEdit(workingExperience.length - 1);
     //
 }
-/*$(document).ready(function(){
-    $("#loginButton").click(function(){
-      $(".main").load("login-form.html", function(login-form.html, statusTxt, xhr){
-        if(statusTxt == "success")
-          alert("External content loaded successfully!");
-        if(statusTxt == "error")
-          alert("Error: " + xhr.status + ": " + xhr.statusText);
-      });
-    });
-  });*/
+// $("#loginButton").click(function(){
+//      $('.main').load("login-form.html");
+// }
