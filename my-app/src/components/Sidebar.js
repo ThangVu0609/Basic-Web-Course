@@ -3,7 +3,7 @@ class Sidebar extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            status: true,
+            isEditing: true,
             name: '. . . .',
             age: '. . . .',
             address: '. . . .',
@@ -18,11 +18,11 @@ class Sidebar extends React.Component {
     }
     
     profileOnEdit = () => {
-            this.setState({status:false})
+            this.setState({isEditing:false})
     } 
 
     profileOnUpdate = () => {
-            this.setState({status:true})
+            this.setState({isEditing:true})
             this.backup = {
                 name: this.state.name,
                 age: this.state.age,
@@ -46,7 +46,7 @@ class Sidebar extends React.Component {
     }
 
     render () {
-        const eventToogle = this.state.status;
+        const eventToogle = this.state.isEditing;
         let stt;
         //let InputTag;
         if (eventToogle) {
